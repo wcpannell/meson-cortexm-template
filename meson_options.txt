@@ -1,0 +1,3 @@
+option('disable-rtti', type : 'boolean', value: true, yield: true)
+option('disable-exceptions', type : 'boolean', value: true, yield: true)
+option('enable-pedantic', type: 'boolean', value: false)

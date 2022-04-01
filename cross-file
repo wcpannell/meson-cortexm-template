@@ -1,0 +1,41 @@
+# Cross compile file for ARM GCC in path
+[binaries]
+c = 'arm-none-eabi-gcc'
+cpp = 'arm-none-eabi-g++'
+ld = 'arm-none-eabi-ld'
+ar = 'arm-none-eabi-ar'
+as = 'arm-none-eabi-as'
+size = 'arm-none-eabi-size'
+objdump = 'arm-none-eabi-objdump'
+objcopy = 'arm-none-eabi-objcopy'
+gdb = 'arm-none-eabi-gdb'
+strip = 'arm-none-eabi-strip'
+
+[built-in options]
+c_args = [
+	'-mthumb',
+	'-mcpu=cortex-m0plus',
+	'-specs=nano.specs',
+	'-specs=nosys.specs',
+	'-D__STARTUP_CLEAR_BSS']
+c_link_args = [
+	'-mthumb',
+	'-mcpu=cortex-m0plus',
+	'-specs=nano.specs',
+	'-specs=nosys.specs']
+cpp_args = [
+	'-mthumb',
+	'-mcpu=cortex-m0plus',
+	'-specs=nano.specs',
+	'-specs=nosys.specs']
+cpp_link_args = [
+	'-mthumb',
+	'-mcpu=cortex-m0plus',
+	'-specs=nano.specs',
+	'-specs=nosys.specs']
+
+[host_machine]
+system = 'none'
+cpu_family = 'arm'
+cpu = 'cortex-m0plus'
+endian = 'little'
